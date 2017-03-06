@@ -1,0 +1,373 @@
+
+ /* 1 头部区域 */
+ body{
+    background: #ccc;
+}
+ .jd_layout{
+ 	min-width: 300px;
+ 	max-width: 640px;
+ 	margin: 0 auto;
+ 	position: relative;
+ }
+ /* 搜索框 */
+ .jd_header{
+ 	position: fixed;
+ 	top: 0;
+ 	left: 0;
+ 	height: 40px;
+ 	z-index: 999;
+ 	width: 100%;
+ 	
+ }
+ .jd_header .jd_header_box{
+    min-width: 300px;
+ 	max-width: 640px;
+ 	margin: 0 auto;
+ 	position: relative;
+    background: rgba(201,21,35,0);
+    height: 40px;
+ }
+
+.jd_header .jd_header_box .icon_logo{
+   background-position: 0 -103px;
+   /* display: block; */
+   position: absolute;
+   width: 60px;
+   height: 36px;
+   top: 4px;
+   left: 10px;   
+}
+.jd_header form{
+	/* 它的宽没设置是因为它可以有内容撑开，设置了宽度反而增加了宽度 */
+	/* width: 100%; */
+	height: 40px;
+	position: relative;
+	padding-left: 75px;
+	padding-right: 55px;
+}
+.jd_header form .icon_search{
+   background-position:-60px -109px;
+   position: absolute;
+   width: 20px;
+   height: 20px;
+   top: 10px;
+   left: 85px;
+}
+.jd_header form input{
+   width: 100%;
+   height: 30px;
+   border-radius: 15px;
+   margin-top: 5px;
+   padding-left: 30px;
+}
+.jd_header .login{
+    width: 50px;
+    height: 40px;
+    display: block;
+    text-align: center;
+    line-height: 40px;
+    font-size: 15px;
+    color: #fff;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+ /* /搜索框 */
+/* 轮播图 */
+.jd_banner{
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+.jd_banner ul:first-child{
+	/* 直接给父级元素一个很大的宽度，这样就能容下子元素，子元素都浮动起来，需要很大的长度， */
+	/* 同时又需要子元素只有一个显现，其他的隐藏，所以给父级元素增加宽度 */
+    width: 1000%;
+    transform: translateX(-10%);
+    -webkit-transform: translateX(-10%);
+    /*防止老版本*/
+}
+.jd_banner ul:first-child li{
+    width: 10%;
+    float: left;
+}
+.jd_banner img{
+	display: block;
+	width: 100%;
+}
+.jd_banner ul:last-child{
+
+    width: 118px;
+    height: 6px;
+    position: absolute;
+    left: 50%;
+    margin-left: -59px;
+    bottom: 10px;
+}
+.jd_banner ul:last-child li{
+	box-sizing: border-box;
+	width: 6px;
+    height: 6px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    margin-left: 10px;
+    float: left;
+}
+.jd_banner ul:last-child li:first-child{
+	margin-left: 0;
+}
+/* /轮播图 */
+/* 导航栏 */
+.jd_nav{
+    height: 150px;
+    width: 100%;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0 3.125%;
+    background: #fff;
+    padding-top: 11px;
+}
+.jd_nav ul{
+    width: 100%;
+}
+.jd_nav ul li{
+	width: 25%;
+    height: 69px;
+	float: left;
+}
+.jd_nav ul li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.jd_nav ul li a img{
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+}
+.jd_nav ul li a p{
+    font-size: 12px;
+    color: #666;
+    margin-top: 6px;
+}
+
+/* /导航栏 */
+/* 商品区 */
+.jd_product{
+    margin: 0 5px;
+}
+/* 公共使用的盒子 */
+.jd_product_box{
+	margin-top: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 1px 1px #e0e0e0;
+}
+.jd_product_box .product_top{
+    height: 32px;
+    border-bottom:1px solid #e0e0e0;
+    position: relative;
+}
+.jd_product_box .product_top.no_bottom{
+	border-bottom: 0;
+}
+.jd_product_box .product_top h3{
+    font-size: 15px;
+    line-height: 32px;
+    color: #666;
+    padding-left: 15px;
+    font-weight: inherit;
+}
+.jd_product_box .product_top h3::before{
+	/* 里面添加图标 */
+	content: " ";
+	height: 12px;
+	width: 3px;
+	background: #d8505c;
+	position: absolute;
+	top: 10px;
+	left: 8px;
+}
+.jd_product_box .product_bottom{
+    width: 100%;
+}
+.secondkill .sk_left{
+	float: left;
+}
+.secondkill .sk_left .sk_icon{
+	background: url('../images/seckill-icon.png') no-repeat;
+	background-size: 16px 20px;
+	float: left;
+	width: 16px;
+	height: 20px;
+	margin-left: 8px;
+    margin-top: 6px;
+}
+.secondkill .sk_left .sk_name{
+	font-size: 15px;
+	font-weight: inherit;
+	color: #d8505c;
+	margin-top: 6px;
+	margin-left: 8px;
+	float: left;
+}
+.secondkill .sk_left .sk_time{
+	float: left;
+    margin-left: 8px;
+    margin-top: 8px;
+}
+.secondkill .sk_left .sk_time .num{
+	display: block;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    background: #333;
+    color: #fff;
+    float: left;
+    line-height: 15px;
+    margin-left: 3px;
+}
+.secondkill .sk_left .sk_time .str{
+    display: block;
+    width: 4px;
+    height: 15px;
+    text-align: center;
+    float: left;
+    line-height: 15px;
+    margin-left: 3px;
+}
+.secondkill .sk_right{
+	float: right;	
+}
+.secondkill .sk_right a{
+   margin-right: 10px;
+   line-height: 32px;
+}
+.product_bottom{
+	width: 100%;
+}
+.product_bottom ul{
+   width: 100%;
+   padding: 10px 0;
+} 
+.product_bottom li{
+	width: 33.33%;
+	float: left;
+}
+.product_bottom li a{
+	width: 100%;
+}
+ .product_bottom li a .img_box{
+    width: 100%;
+    border-right: 1px solid #e0e0e0;
+ }
+ .product_bottom li:last-child a .img_box{
+ 	border-right: 0;
+ }
+ .product_bottom li a .img_box img{
+ 	width: 64%;
+ 	display: block;
+    margin: 0 auto;
+}
+ .product_bottom ul li a .now_price{
+ 	color: #d8505c;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 3px;
+ }
+ .product_bottom ul li a .old_price{
+ 	font-size: 12px;
+    text-decoration: line-through;/*删除线*/
+    margin-top: 3px;
+    text-align: center;
+    color: #888;
+ }
+/* 超值购 */
+/* - */
+.jd_product .jd_pd .product_bottom{
+    width: 100%;
+}
+/* 左边图 */
+.jd_product .jd_pd .product_bottom .p_left{
+    width: 50%;
+    float: left;
+}
+/* 右边图 */
+.jd_product .jd_pd .product_bottom .p_right{
+    width: 50%;
+    float: right;
+}
+/*左边框*/
+.jd_product .jd_pd .product_bottom .b_left{
+    border-left: 1px solid #e0e0e0;
+}
+/*右边框*/
+.jd_product .jd_pd .product_bottom .b_right{
+    border-right: 1px solid #e0e0e0;
+}
+/*下边框*/
+.jd_product .jd_pd .product_bottom .b_bottom{
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.jd_product .jd_pd .product_bottom a img{
+    width: 100%;
+    display: block;
+}
+
+/* /商品区 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
